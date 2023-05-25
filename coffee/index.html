@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Coffee</title>
+    <!--css style sheet-->
+    <link rel="stylesheet" href="index.css">
+      <!--font awwsome style sheet-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+     <!-- Header start-->
+   <header>
+    <div class="logo" >
+       <img src="data:image/png;base64,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">
+       <div class="menu-bar"><i class="fa-solid fa-bars"></i></div>
+    </div> 
+    <nav>
+            <ul class="list-item">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Service</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="reservation.html">Reservation</a> </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+   </header>
+    <!-- Header end-->
+   <!-- Home start-->
+   <section id="home">
+    <div class="slider-box">
+        <div class="slider-img">
+            <img src="img/carousel-1.jpg"  class="active">
+        </div>
+        <div class="slider-img">
+            <img src="img/carousel-2.jpg">
+        </div>
+        <div class="img-content">
+            <p>We Have Been Serving</p>
+            <h1>COFFEE</h1>
+            <h4>*SINCE 1945*</h4>
+           </div>
+           <div class="slider-btn">
+            <div><i class="fa-solid fa-circle-arrow-left" id="left-arrow"></i></div>
+            <div><i class="fa-solid fa-circle-arrow-right" id="right-arrow"></i></div>
+           </div>
+           <div class="bottom-img">
+            <img src="img/overlay-bottom.png" width="100%">
+           </div>
+    </div>
+   </section>
+ <!-- Home end-->
+  <!-- navegation start-->
+  <div id="navegation">
+   <a href="#"> <i class="fa-solid fa-angles-up"></i></a>
+</div>
+<!-- navegation end-->
+    <!--about start-->
+    <section id="about" class="commen-padding" >
+       <center>
+        <h2 class="section-title">ABOUT US</h2>
+        <h1 class="section-subtitle">Serving Since 1945</h1>
+       </center>
+       <div class="about-content">
+       <div id="flex-start">
+        <h4>Our Story</h4>
+        <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit.  commodi dignissimos corporis ea quis, aspernatur cincidunt natus error rem, sequi nobis nemo nostrum porro temporibus odit quam repellat deserunt ea nostrum!</h5>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum nulla esse facere ullam, nisi fugiat fugaconsectetur adipisicing elit.  commodi digni facilis delectus! Hic ab neque!</p>
+        <button>Learn More</button>
+       </div>
+       <div id="flex-center">
+        <div class="about-img">
+        <img src="img/about.png" >
+         </div>
+        </div>
+       <div id="flex-end">
+        <h1>Our Vision</h1>
+       <p class="p"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum aliquid asperiores deleniti suscipit laborum saepe recusandae, neque quae amet aut sunt hic et eum, iure tenetur? Veritatis facilis distinctio optio? Tenetur possimus dolores iste totam est, nihil quos corporis ab quo eos dolorem alias ipsam temporibus ad voluptates dolor vitae.</p>
+       <ul class="ul">
+        <li class="li">
+            <p class="p"><i class="fa-solid fa-check"></i> Lorem ipsum dolor sit amet</p>
+        </li>
+        <li class="li">
+            <p class="p"><i class="fa-solid fa-check"></i>  Lorem ipsum dolor sit amet</p>
+        </li>
+        <li class="li">
+            <p class="p"><i class="fa-solid fa-check"></i> Lorem ipsum dolor sit amet</p>
+        </li>
+       </ul>
+       <button>Learn More</button>
+       </div>
+       </div>
+    </section>
+    <!--about end-->
+      <!--service start-->
+       <section id="services" class="commen-padding">
+        <center>
+            <h2  class="section-title">OUR SERVICES</h2>
+            <h1  class="section-subtitle">Fresh & Organic Beans</h1>
+           </center>
+          <div class="services-card">
+
+            <div class="services-box">
+                <div class="services-img">
+                    <img src="img/service-1.jpg" >
+                </div>
+                <div class="services-img-content">
+                    <h3> <i class="fa-solid fa-truck"></i>  Fastest Door Delivery</h3>
+                    <p>Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum  ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima erat temportakima erat tempor</p>
+                </div>
+               </div>
+
+               <div class="services-box">
+                <div class="services-img">
+                    <img src="img/service-2.jpg" >
+                </div>
+                <div class="services-img-content">
+                    <h3> <i class="fa-solid fa-coffee"></i> Fresh Coffee Beans</h3>
+                    <p>Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum  ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima erat temportakima erat tempor</p>
+                </div>
+               </div>
+
+               <div class="services-box">
+                <div class="services-img">
+                    <img src="img/service-3.jpg" >
+                </div>
+                <div class="services-img-content">
+                    <h3><i class="fa-solid fa-award"></i> Best Quality Coffee</h3>
+                    <p>Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum  ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima erat temportakima erat tempor</p>
+                </div>
+               </div>
+
+               <div class="services-box">
+                <div class="services-img">
+                    <img src="img/service-4.jpg" >
+                </div>
+                <div class="services-img-content">
+                    <h3> <i class="fa-solid fa-table"></i>  Online Table Booking</h3>
+                    <p>Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum  ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima erat temportakima erat tempor</p>
+                </div>
+               </div>
+    
+          </div>
+       </section>
+       <!--service end-->
+        <!--singup start-->
+        <section id="sin-up">
+            <div id="sinup-content">
+            <h1 class="section-title" style="font-size: 48px;">50% OFF</h1>
+            <h3 class="section-subtitle" style="color: white;">Sunday Special Offer</h3>
+            <p style="color: white; font-size: 24px;">Only for Sunday from 1st Jan to 30th Jan 2023</p>
+            <br>
+            <form>
+            <input type="mail" placeholder="Enter Your Email" required>
+             <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+            </form>
+            </div>
+            <div id="over-lay">
+                <img src="img/overlay-top.png">
+                <img src="img/overlay-bottom.png">
+            </div>
+        </section>
+        <!--singup end-->
+         <!--Menu start-->
+         <section id="menu" class="commen-padding">
+            <center>
+                <h2  class="section-title">MENU & PRICING</h2>
+                <h1  class="section-subtitle">Competitive Pricing</h1>
+               </center>  
+               <div class="menu-flex-box">
+
+               <div id="hot-coffee">
+                <h3  class="section-subtitle">Hot Coffee</h3>
+                <div class="menu-flex">
+                    <div class="img">
+                        <img src="img/menu-1.jpg">
+                    </div>
+                    <div class="img-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, a fugit accusantium delectus animi exercitationem vitae debitis eos labore quam?</p>
+                    </div>
+                   </div>
+                   <div class="menu-flex">
+                    <div class="img">
+                        <img src="img/menu-2.jpg">
+                    </div>
+                    <div class="img-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, a fugit accusantium delectus animi exercitationem vitae debitis eos labore quam?</p>
+                    </div>
+                   </div>
+                   <div class="menu-flex">
+                    <div class="img">
+                        <img src="img/menu-3.jpg">
+                    </div>
+                    <div class="img-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, a fugit accusantium delectus animi exercitationem vitae debitis eos labore quam?</p>
+                    </div>
+                   </div>
+               </div>
+
+               <div id="cold-coffee">
+                <h3 class="section-subtitle">cold Coffee</h3>
+                <div class="menu-flex">
+                    <div class="img">
+                        <img src="img/service-1.jpg">
+                    </div>
+                    <div class="img-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, a fugit accusantium delectus animi exercitationem vitae debitis eos labore quam?</p>
+                    </div>
+                   </div>
+                   <div class="menu-flex">
+                    <div class="img">
+                        <img src="img/service-2.jpg">
+                    </div>
+                    <div class="img-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, a fugit accusantium delectus animi exercitationem vitae debitis eos labore quam?</p>
+                    </div>
+                   </div>
+                   <div class="menu-flex">
+                    <div class="img">
+                        <img src="img/service-3.jpg">
+                    </div>
+                    <div class="img-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, a fugit accusantium delectus animi exercitationem vitae debitis eos labore quam?</p>
+                    </div>
+                   </div>
+               </div>
+            </div>
+         </section>
+        <!--Menu end-->
+        <!--Tabel bookings start-->
+        <section id="tabelBook" >
+            <div class="tabelBookContentLeft">
+                <div>
+                 <h1 class="section-title">30% OFF</h1>
+                 <h3 class="section-subtitle" style="color: white;">For Online Reservation</h3>
+                 <ul class="ul">
+                     <li class="li"><p class="p"><i class="fa-solid fa-check"></i>Lorem ipsum dolor sit amet.</p></li>
+                     <li class="li"><p class="p"><i class="fa-solid fa-check"></i>Lorem ipsum dolor sit amet.</p></li>
+                     <li class="li"><p class="p"><i class="fa-solid fa-check"></i>Lorem ipsum dolor sit amet.</p></li>
+                     <li class="li"><p class="p"><i class="fa-solid fa-check"></i>Lorem ipsum dolor sit amet.</p></li>
+                 </ul>
+                </div>
+             </div>
+                 <form class="tabelBookContentRight">
+                    <div>
+                     <h1>Book Your Table</h1>
+                     <input type="text" placeholder="Name" required>
+                     <input type="email" placeholder="Email" required>
+                     <input type="date" placeholder="Date" required>
+                     <input type="text" placeholder="Time" required>
+                     <select >
+                         <option>Person</option>
+                         <option>Person1</option>
+                         <option>Person2</option>
+                         <option>Person3</option>
+                         <option>Person4</option>
+                     </select>
+                     <input type="submit" value="Book Now" style="background-color:#DDA15E; color: #000; font-size: 20px; font-weight: 500;">
+                    </div>
+                 </form>
+         </section>
+         <!--Tabel bookings end-->
+         <footer>
+            <img src="img/overlay-top.png" alt="">
+           <div id="footergrid">
+            <div>
+                <h2>GET IN TOUCH</h2>
+                <p><i class="fa-sharp fa-solid fa-location-dot"></i>123 Street, New York, USA</p>
+                <p> <i class="fa-solid fa-phone"></i>+012 345 67890</p>
+                <p> <i class="fa-solid fa-envelope"></i>mail@domain.com</p>
+            </div>
+            <div>
+                <h2>FOLLOW US</h2>
+                <p>Amet elitr vero magna sed ipsum sit kasd sea elitr lorem rebum</p>
+                <a href="#"><span><i class="fa-brands fa-facebook"></i></span></a>
+                <a href="#"><span><i class="fa-brands fa-twitter"></i></span></a>
+               <a href="#"> <span><i class="fa-brands fa-instagram"></i></span></a>
+               <a href="#"><span><i class="fa-brands fa-linkedin"></i></span></a> 
+            </div>
+            <div>
+                <h2>OPEN HOURS</h2>
+                <p><b>MONDAY - FRIDAY</b></p>
+                <p><b>8.00 AM - 8.00 PM</b></p>
+                <p><b>SATURDAY - SUNDAY</b></p>
+                <p><b>2.00 PM - 8.00 PM</b></p>
+            </div>
+            <div>
+                <h2>NEWSLETTER</h2>
+                <p>Amet elitr vero magna sed ipsum sit kasd sea elitr lorem rebum</p>
+                <form >
+                    <input type="email" placeholder="Your Email" required>
+                <input type="submit" value="sign Up">
+                </form>
+            </div>
+           </div>
+           <div id="copyright">
+            <p>Copyright © <span>2022.</span> All Rights Reserved.</p>
+            <p>Designed by <span>HTML Codex</span></p>
+           </div>
+         </footer>
+        <!--js -->
+    <script src="index.js"></script>
+</body>
+</html>
